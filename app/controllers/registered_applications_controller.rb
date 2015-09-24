@@ -6,7 +6,7 @@ class RegisteredApplicationsController < ApplicationController
   end
 
   def new
-    @registered_application = RegisteredApplication.new
+    @registered_application = current_user.registered_applications.build
   end
 
   def create
@@ -34,11 +34,11 @@ class RegisteredApplicationsController < ApplicationController
   end
 
   def registered_applications
-    @registered_applications ||= RegisteredApplication.all
+    @registered_applications ||= current_user.registered_applications.all
   end
 
   def registered_application
-    @registered_application ||= RegisteredApplication.find(params[:id])
+    @registered_application ||= current_user.registered_applications.find(params[:id])
   end
 
   helper_method :registered_applications, :registered_application
