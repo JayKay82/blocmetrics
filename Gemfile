@@ -29,6 +29,14 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 
+# Testing
+group :test, :development do
+  gem 'rspec-rails', '~>3.0'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'factory_girl_rails', '~>4.0'
+end
+
 # Miscellaneous
 gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc

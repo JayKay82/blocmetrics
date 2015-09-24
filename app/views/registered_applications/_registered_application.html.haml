@@ -1,0 +1,6 @@
+.media
+  .media-body
+    %h4.media-heading
+      = link_to registered_application.name, registered_application_path(registered_application)
+      = link_to '- unregister', registered_application_path(registered_application), class: 'unregister',
+        method: :delete

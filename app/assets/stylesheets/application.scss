@@ -25,6 +25,19 @@ $flash-error-colour: #e44b22;
   margin-top: 5px;
 }
 
+// Registered Application
+.unregister {
+  color: red;
+  font-weight: 200;
+  font-size: 0.8em;
+
+  &:hover {
+    color: red;
+    font-weight: 400;
+    text-decoration: none;
+  }
+}
+
 // h1, h2, h3 {
 //   color: $text-colour;
 // }

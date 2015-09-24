@@ -1,0 +1,20 @@
+%h2 Register an Application
+.row
+  .col-md-8
+    = form_for registered_application do |f|
+      - if registered_application.errors.any?
+        .alert.alert-danger
+          %h3 Errors!
+          %ul
+            - registered_application.errors.full_messages.each do |msg|
+              %li= msg
+      .form-group
+        = f.label :name
+        = f.text_field :name, autofocus: true, class: 'form-control',
+          placeholder: 'Enter a name for your app...'
+      .form-group
+        = f.label(:url, 'URL')
+        = f.text_field :url, class: 'form-control',
+          placeholder: 'Enter a url for your app...'
+      .form-group
+        = f.submit 'Register', class: 'btn btn-success'
