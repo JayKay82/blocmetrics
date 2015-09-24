@@ -15,7 +15,7 @@ class RegisteredApplicationsController < ApplicationController
     if @registered_application.save
       redirect_to root_path, notice: 'Successfully registered a new application.'
     else
-      redirect_to :back, error: 'Unable to register the application. Please try again.'
+      render :new, error: 'Unable to register the application. Please try again.'
     end
   end
 
