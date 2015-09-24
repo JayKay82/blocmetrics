@@ -39,25 +39,25 @@ $flash-error-colour: #e44b22;
 //   }
 // }
 
-// Flash messages
-.flash {
-  width: 250px;
-  border: 1px solid;
-  border-radius: 10px;
-  position: absolute;
-  top: 50px;
-  right: 30px;
-  font-size: 1.2em;
-
-  .notice {
-    background-color: $flash-notice-colour;
-  }
-
-  .alert {
-    background-color: $flash-alert-colour;
-  }
-
-  .error {
-    background-color: $flash-error-colour;
-  }
-}
+// // Flash messages
+// .flash {
+//   width: 250px;
+//   border: 1px solid;
+//   border-radius: 10px;
+//   position: absolute;
+//   top: 50px;
+//   right: 30px;
+//   font-size: 1.2em;
+//
+//   .notice {
+//     background-color: #4ead43;
+//   }
+//
+//   .alert {
+//     background-color: $flash-alert-colour;
+//   }
+//
+//   .error {
+//     background-color: $flash-error-colour;
+//   }
+// }
