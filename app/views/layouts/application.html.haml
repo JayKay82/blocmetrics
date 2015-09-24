@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Blocmetrics
+    %meta{:name =>"viewport", :content => "width=device-width, initial-scale=1"}
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .container
+      %ul.nav.nav-tabs
+        %li
+          = link_to 'Blocmetrics', root_path
+        .pull-right.authentication
+          = link_to 'Sign In'
+          = link_to 'Sign Up'
+      - if flash[:notice]
+        .flash.notice{ 'data-alert' => '' }
+          = flash[:notice]
+          %a.close{ href: '#' } &times;
+      - elsif flash[:alert]
+        .flash.alert{ 'data-alert' => '' }
+          = flash[:alert]
+          %a.close{ href: '#' } &times;
+      - elsif flash[:error]
+        .flash.error{ 'data-alert' => '' }
+          = flash[:error]
+          %a.close{ href: '#' } &times;
+
+      = yield

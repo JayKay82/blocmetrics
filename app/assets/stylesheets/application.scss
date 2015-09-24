@@ -5,3 +5,59 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// --- Site colours ---
+// Main Colours
+$text-colour: #535151;
+
+// Alert boxes
+$flash-notice-colour: #4ead43;
+$flash-alert-colour: #e6be17;
+$flash-error-colour: #e44b22;
+
+// Site
+// Navigation bar
+.authentication {
+  margin-top: 9px;
+}
+
+.nav {
+  margin-top: 5px;
+}
+
+// h1, h2, h3 {
+//   color: $text-colour;
+// }
+//
+// // Header
+// .title {
+//   margin-left: 3%;
+//   color: $text-colour;
+//
+//   a:hover {
+//     text-decoration: none;
+//   }
+// }
+
+// Flash messages
+.flash {
+  width: 250px;
+  border: 1px solid;
+  border-radius: 10px;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  font-size: 1.2em;
+
+  .notice {
+    background-color: $flash-notice-colour;
+  }
+
+  .alert {
+    background-color: $flash-alert-colour;
+  }
+
+  .error {
+    background-color: $flash-error-colour;
+  }
+}
