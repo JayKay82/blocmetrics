@@ -1,11 +1,12 @@
 require 'rails_helper'
 
 RSpec.feature "Registered Application Management", type: :feature do
-  include RegisteredAppSteps
+  include BlocmetricsSteps
 
   before do
     user = create(:user, :confirmed)
     @application = create(:registered_application, user: user)
+    5.times { create(:event, registered_application: @application) }
     visit root_path
     user_signs_in
   end
@@ -26,9 +27,13 @@ RSpec.feature "Registered Application Management", type: :feature do
     expect(page).to have_content(@application.url)
   end
 
+  scenario "User can view associated events on the registered application's show page" do
+    click_link @application.name
+    expect(page).to have_content('create wiki - 5x')
+  end
+
   scenario "User can unregister a registered application" do
     click_link 'unregister'
-
     expect(page).to have_content('Successfully unregistered the application.')
     expect(page).to_not have_content(@application.name)
   end

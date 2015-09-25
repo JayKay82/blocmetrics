@@ -1,2 +1,4 @@
 %h2= registered_application.name
 %p= registered_application.url
+- events.each do |name, events|
+  = render partial: 'event', locals: { name: name, events: events }

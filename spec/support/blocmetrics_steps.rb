@@ -1,4 +1,4 @@
-module RegisteredAppSteps
+module BlocmetricsSteps
   def user_signs_in
     within '.authentication' do
       click_link 'Sign In'
