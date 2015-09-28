@@ -41,6 +41,7 @@ end
 gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faker'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'byebug'
