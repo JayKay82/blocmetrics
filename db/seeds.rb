@@ -12,13 +12,13 @@ user.save!
 # Create some registered applications
 RegisteredApplication.create!(
   name: 'Blocipedia',
-  url: 'jaykay-blocipedia@herokuapp.com',
+  url: 'jaykay-blocipedia.herokuapp.com',
   user: user
 )
 
 RegisteredApplication.create!(
   name: 'Blocitoff',
-  url: 'jaykay-blocitoff@herokuapp.com',
+  url: 'jaykay-blocitoff.herokuapp.com',
   user: user
 )
 registered_applications = RegisteredApplication.all

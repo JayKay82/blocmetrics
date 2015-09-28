@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   # Registered applications and events
   resources :registered_applications, except: [:edit, :update]
 
+  namespace :api, defaults: { format: :json } do
+    match '/events', to: 'events#index', via: [:options]
+    resources :events, only: [:create]
+  end
+
   # Root paths
   authenticated :user do
     root to: 'registered_applications#index', as: 'authenticated_root'
