@@ -1,4 +1,6 @@
 %h2= registered_application.name
 %p= registered_application.url
-- events.each do |name, events|
-  = render partial: 'event', locals: { name: name, events: events }
+= pie_chart registered_application.events.group(:name).count
+= line_chart registered_application.events.group_by_day(:created_at).count
+-# - events.each do |name, events|
+-#   = render partial: 'event', locals: { name: name, events: events }
